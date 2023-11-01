@@ -1,0 +1,1027 @@
+
+<!-- Video Popup -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
+                                                                                                height="40">
+          <use xlink:href="#close-sharp"></use>
+        </svg></button>
+        <div class="ratio ratio-16x9">
+          <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                  allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
+    <path fill="currentColor"
+          d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 32 32">
+    <path fill="currentColor"
+          d="M29.41 9.26a3.5 3.5 0 0 0-2.47-2.47C24.76 6.2 16 6.2 16 6.2s-8.76 0-10.94.59a3.5 3.5 0 0 0-2.47 2.47A36.13 36.13 0 0 0 2 16a36.13 36.13 0 0 0 .59 6.74a3.5 3.5 0 0 0 2.47 2.47c2.18.59 10.94.59 10.94.59s8.76 0 10.94-.59a3.5 3.5 0 0 0 2.47-2.47A36.13 36.13 0 0 0 30 16a36.13 36.13 0 0 0-.59-6.74ZM13.2 20.2v-8.4l7.27 4.2Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 256 256">
+    <path fill="currentColor"
+          d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 24 24">
+    <path fill="currentColor"
+          d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 512 512">
+    <path fill="currentColor"
+          d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32Zm-273.3 373.43h-64.18V205.88h64.18ZM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43c0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43Zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44c-17.74 0-28.24 12-32.91 23.69c-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44c42.13 0 74 27.77 74 87.64Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-icon" viewBox="0 0 512 512">
+    <path fill="currentColor"
+          d="m359.873 121.377l-22.627 22.627l95.997 95.997H16v32.001h417.24l-95.994 95.994l22.627 22.627L494.498 256L359.873 121.377z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="spa" viewBox="0 0 576 512">
+    <path fill="currentColor"
+          d="M183.1 235.3c33.7 20.7 62.9 48.1 85.8 80.5c7 9.9 13.4 20.3 19.1 31c5.7-10.8 12.1-21.1 19.1-31c22.9-32.4 52.1-59.8 85.8-80.5C437.6 207.8 490.1 192 546 192h9.9c11.1 0 20.1 9 20.1 20.1c0 148-119.9 267.9-267.9 267.9h-40.2C119.9 480 0 360.1 0 212.1C0 201 9 192 20.1 192H30c55.9 0 108.4 15.8 153.1 43.3zM301.5 37.6c15.7 16.9 61.1 71.8 84.4 164.6c-38 21.6-71.4 50.8-97.9 85.6c-26.5-34.8-59.9-63.9-97.9-85.6c23.2-92.8 68.6-147.7 84.4-164.6c3.5-3.7 8.4-5.6 13.5-5.6s10 1.9 13.5 5.6z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="fishing" viewBox="0 0 512 512">
+    <path fill="currentColor"
+          d="M453 61.16C382.3 72.25 282.7 104.9 207.3 160c.4.2.8.5 1.2.7c4.8 3.1 8.8 7.3 11.5 12.4c66-47.5 153.2-78.35 219-91.15V401.8h18V73.85c-.3-5.2-3.1-12.04-4-12.69zm-344.9 5.69c-18.66 0-35.13 18.4-35.13 42.85c0 24.5 16.47 42.9 35.13 42.9c18.7 0 35.1-18.4 35.1-42.9c0-24.45-16.4-42.85-35.1-42.85zM79.73 161.2c-16.65 42.2-23.61 86.3-28.4 126.9c24.46-.9 48.24-2.4 70.97-4.5c-1.8-14.3-2.9-28.5-3.5-42.7c-8-5.9-16.2-12.8-24.39-20.1l11.99-13.4c10.9 9.7 21.5 18.4 30.9 24.5c9.3 6.2 17.6 9.5 21.9 9.8h.1c-.5 0 2.1-.4 5.7-2.8c3.5-2.5 8-6.5 12.6-11.5c9.2-9.9 19.2-23.9 26.7-37.8c1.3-2.4 1.3-4.4.3-6.9c-.9-2.5-3.1-5.2-5.9-6.9c-2.7-1.8-5.8-2.6-8.4-2.3c-2.6.3-5.1 1.3-7.9 5.1l-26.8 35.9l-42-44.3c-1.8.3-3.6.4-5.5.4c-10.56 0-20.24-3.5-28.37-9.4zM273.3 278.5c-63.1 14.3-154.2 27.4-254.3 28.1v94.2h138.7c53.8-27.5 96.3-79.7 115.6-122.3zM64 416.8c-13.18 0-29.27 4.3-42.85 8.4c-1.08.3-2.11.6-3.15 1V445c2.59-.8 5.39-1.7 8.36-2.6c12.92-3.9 28.83-7.6 37.64-7.6c8.81 0 18.29 3.4 28.79 7.4c10.51 4 22.01 8.6 35.21 8.6s24.7-4.6 35.2-8.6c10.5-4 20-7.4 28.8-7.4s18.3 3.4 28.8 7.4s22 8.6 35.2 8.6c13.2 0 24.7-4.6 35.2-8.6c10.5-4 20-7.4 28.8-7.4s18.3 3.4 28.8 7.4s22 8.6 35.2 8.6c13.2 0 24.7-4.6 35.2-8.6c10.5-4 20-7.4 28.8-7.4s24.7 3.7 37.6 7.6c3 .9 5.8 1.8 8.4 2.6v-18.8c-1-.4-2-.7-3.1-1c-13.6-4.1-29.7-8.4-42.9-8.4s-24.7 4.6-35.2 8.6c-10.5 4-20 7.4-28.8 7.4s-18.3-3.4-28.8-7.4s-22-8.6-35.2-8.6c-13.2 0-24.7 4.6-35.2 8.6c-10.5 4-20 7.4-28.8 7.4s-18.3-3.4-28.8-7.4s-22-8.6-35.2-8.6c-13.2 0-24.7 4.6-35.2 8.6c-10.5 4-20 7.4-28.8 7.4s-18.3-3.4-28.8-7.4s-22.02-8.6-35.2-8.6z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="pool" viewBox="0 0 24 24">
+    <path fill="currentColor"
+          d="M2 15c1.67-.75 3.33-1.5 5-1.83V5a3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H10a1 1 0 0 0-1 1v1h5V5a3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H17a1 1 0 0 0-1 1v9.94c2-.32 4-1.94 6-1.94v2c-2.22 0-4.44 2-6.67 2c-2.22 0-4.44-2-6.66-2c-2.23 0-4.45 1-6.67 2v-2m12-7H9v2h5V8m0 4H9v1c1.67.16 3.33 1.31 5 1.79V12M2 19c2.22-1 4.44-2 6.67-2c2.22 0 4.44 2 6.66 2c2.23 0 4.45-2 6.67-2v2c-2.22 0-4.44 2-6.67 2c-2.22 0-4.44-2-6.66-2c-2.23 0-4.45 1-6.67 2v-2Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="dining" viewBox="0 0 26 26">
+    <path fill="currentColor"
+          d="M6 0S5 7 5 8s2.25 3 2.25 3L7 24.344C7 25.448 7.896 26 9 26s2-.552 2-1.656L10.75 11S13 8.958 13 8c0-.958-1-8-1-8h-1v6.5a.5.5 0 0 1-1 0c0-.093-.344-6.5-.344-6.5H8.344S8 6.407 8 6.5a.5.5 0 0 1-1 0V0H6zm10.719.063C16.13.204 16 .835 16 1.53v22.813c0 1.104.896 1.656 2 1.656s1.969-.553 1.969-1.656c0-5.087-1-7.799-1-10.344c0-1.148 2.031-2.626 2.031-7.969c0-3.268-2.896-5.968-4-5.968c-.104 0-.197-.02-.281 0z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="bar" viewBox="0 0 15 15">
+    <path fill="currentColor"
+          d="M7.5 1c-2 0-7 .25-6.5.75L7 8v4c0 1-3 .5-3 2h7c0-1.5-3-1-3-2V8l6-6.25c.5-.5-4.5-.75-6.5-.75zm0 1c2.5 0 4.75.25 4.75.25L11.5 3h-8l-.75-.75S5 2 7.5 2z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="barbeque" viewBox="0 0 24 24">
+    <path fill="currentColor"
+          d="M9 21v-3H2v-2h7q.825 0 1.413.588T11 18v3H9Zm4 0v-3q0-.825.588-1.413T15 16h7v2h-7v3h-2Zm-7-6q-1.25 0-2.125-.875T3 12V8h18v4q0 1.25-.875 2.125T18 15H6ZM3 7V5h6V4q0-.425.288-.713T10 3h4q.425 0 .713.288T15 4v1h6v2H3Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left" viewBox="0 0 1024 1024">
+    <path fill="currentColor"
+          d="M752.145 0c8.685 0 17.572 3.434 24.237 10.099c13.33 13.33 13.33 35.143 0 48.473L320.126 515.03l449.591 449.591c13.33 13.33 13.33 35.144 0 48.474c-13.33 13.33-35.142 13.33-48.472 0L247.418 539.268c-13.33-13.33-13.33-35.144 0-48.474L727.91 10.1C734.575 3.435 743.46.002 752.146.002z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 1024 1024">
+    <path fill="currentColor"
+          d="M271.653 1023.192c-8.685 0-17.573-3.432-24.238-10.097c-13.33-13.33-13.33-35.144 0-48.474L703.67 508.163L254.08 58.573c-13.33-13.331-13.33-35.145 0-48.475c13.33-13.33 35.143-13.33 48.473 0L776.38 483.925c13.33 13.33 13.33 35.143 0 48.473l-480.492 480.694c-6.665 6.665-15.551 10.099-24.236 10.099z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-down" viewBox="0 0 24 24">
+    <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222l4.95 4.95Z" />
+  </symbol>
+
+  <symbol id="player" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="90" cy="90" r="89.5" stroke="white" stroke-opacity="0.65" />
+    <circle cx="90" cy="90" r="73.5" stroke="white" stroke-opacity="0.65" />
+    <circle cx="90" cy="90" r="57.5" stroke="white" stroke-opacity="0.65" />
+    <path
+      d="M77.5625 67.634V112.366L80.7202 110.303L112.303 89.9998L80.7181 69.6965L77.5625 67.634ZM81.6875 75.1766L104.697 89.9998L81.6875 104.825V75.1766Z"
+      fill="white" />
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" id="btn-close" viewBox="0 0 16 16">
+    <path
+      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-down" viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" id="page-arrow" width="24" height="24" viewBox="0 0 24 24">
+    <path fill="currentColor" d="m12 15l-5-5h10l-5 5Z" />
+  </symbol>
+</svg>
+
+<header id="header" class="site-header header-scrolled position-absolute text-black bg-light">
+  <nav id="header-nav" class="navbar fixed-top navbar-expand-lg px-3 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/main-logo.png" class="logo">
+      </a>
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-2 shadow-none" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="navbar-icon">
+          <use xlink:href="#navbar-icon"></use>
+        </svg>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+        <div class="offcanvas-header px-4 pb-0">
+          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
+                  data-bs-target="#bdNavbar"></button>
+        </div>
+        <div class="offcanvas-body text-hover light-border">
+          <ul id="navbar"
+              class="navbar-nav text-uppercase justify-content-lg-center justify-content-md-end align-items-center flex-grow-1 pe-3">
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase" href="#about">About us</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase" href="#activities">Activities</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase" href="#our-rooms">Rooms</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase" href="#booking-wrap">Booking</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase" href="#contact">Contact</a>
+            </li>
+
+            <li class="nav-item dropdown pe-4">
+
+              <ul class="dropdown-menu">
+                <li><a href="about.html" class="dropdown-item">About <span class="badge bg-secondary">PRO</span></a>
+                </li>
+                <li><a href="blog.html" class="dropdown-item">Blog <span class="badge bg-secondary">PRO</span></a>
+                </li>
+                <li><a href="single-post.html" class="dropdown-item">Single-Post <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="rooms.html" class="dropdown-item">Rooms <span class="badge bg-secondary">PRO</span></a>
+                </li>
+                <li><a href="room-details.html" class="dropdown-item">Room-Details <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="booking.html" class="dropdown-item">Booking <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="services.html" class="dropdown-item">Services <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="gallery.html" class="dropdown-item">gallery <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="contact.html" class="dropdown-item">Contact <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="reviews.html" class="dropdown-item">Review <span
+                  class="badge bg-secondary">PRO</span></a></li>
+                <li><a href="faqs.html" class="dropdown-item">FAQs <span class="badge bg-secondary">PRO</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item pe-4">
+              <a class="nav-link light text-uppercase fw-bold fs-5" href="https://templatesjungle.gumroad.com/l/telly-hotel-and-resort-html-website-template">GET PRO</a>
+            </li>
+
+          </ul>
+
+          <div class="btn-box">
+            <button class="btn btn-arrow btn-pill btn-medium btn-outline-light position-relative">
+                <span>Book Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                   enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                    <g>
+                      <line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9"
+                            x2="34" y2="12.9"></line>
+                      <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                    </g>
+                  </svg></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section id="intro">
+  <div class="image-holder position-relative">
+    <img src="assets/images/banner-item1.jpg" alt="banner" class="img-fluid">
+  </div>
+  <div class="container-lg">
+    <div class="banner-content position-absolute">
+      <span class="light text-uppercase">Best Hotel With Cozy Rooms</span>
+      <h1 class="banner-title light display-1 text-capitalize py-3 lh-sm">Just Experience A New Level Of Luxury.
+      </h1>
+      <p class="light fs-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum eget vel
+        quam adipiscing turpis. Consectetur phasellus nam interdum eu dictum nunc. A fermentum ipsum nulla adipiscing
+        ornare molestie.</p>
+
+      <a href="rooms.html" class="btn btn-arrow btn-pill btn-medium btn-outline-light position-relative">
+          <span>Explore Rooms<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                  enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+              <g>
+                <line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                      y2="12.9"></line>
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                          points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+              </g>
+            </svg></span>
+      </a>
+    </div>
+    <div class="social-links position-absolute">
+      <ul class="list-unstyled d-flex d-md-block justify-content-center">
+        <li class="pb-3 pe-3"><a href="#" class="light">Fb</a></li>
+        <li class="pb-3 pe-3"><a href="#" class="light">Ig</a></li>
+        <li class="pb-3 pe-3"><a href="#" class="light">Tw</a></li>
+        <li class="pb-3 pe-3"><a href="#" class="light">Li</a></li>
+        <li><a href="#" class="light">Yt</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="padding-xlarge text-center position-relative overflow-hidden">
+  <div class="pattern-overlay pattern-right position-absolute">
+    <img src="assets/images/leaf-pattern1.png" alt="pattern">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="detail mb-4">
+        <h2 class="display-5 text-capitalize">Welcome to hotel telly</h2>
+        <p>Amet, cras egestas in ultrices sapien iaculis. Posuere mauris neque metus id tristique pellentesque
+          gravida.
+          Cursus id in nam pellentesque est. Et erat quam sed nisl convallis faucibus mauris, consectetur tempus,
+          a ut dictum sapien risus maecenas dictum nunc arcu nunc arcu, vulputate ut.</p>
+      </div>
+    </div>
+
+    <a href="about.html"
+       class="btn btn-arrow btn-pill btn-medium btn-outline-dark bg-light text-black position-relative">
+        <span>About Us<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                           enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+            <g>
+              <line fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                    y2="12.9"></line>
+              <polyline fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10"
+                        points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+            </g>
+          </svg></span>
+    </a>
+  </div>
+</section>
+
+<section id="activities" class="overflow-hidden">
+  <div class="container-fluid p-0">
+    <div class="row">
+
+      <div class="col-lg-6 col-md-12 g-0">
+        <div class="image-holder">
+          <img src="assets/images/single-image.jpg" alt="hotel" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 bg-gray-100 d-flex align-items-center justify-content-center">
+        <div class="detail">
+
+          <div class="display-header">
+            <h2 class="display-5">What Activities We Offer</h2>
+            <p>Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi suscipit ac ut faucibus pretium.
+              Ultrices interdum viverra pharetra, tellus. Sapien eu diam ipsum volutpat, amet fringilla.</p>
+          </div>
+
+          <div class="row mt-5">
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="spa">
+                    <use xlink:href="#spa"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-4">Spa</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="fishing">
+                    <use xlink:href="#fishing"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-5">Fishing</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="bar">
+                    <use xlink:href="#bar"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-5">Bar</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="pool">
+                    <use xlink:href="#pool"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-5">Pool</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="dining">
+                    <use xlink:href="#dining"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-5">Dining</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="icon-box d-flex align-items-center pb-5">
+                <div class="icon-box-icon">
+                  <svg class="barbeque">
+                    <use xlink:href="#barbeque"></use>
+                  </svg>
+                </div>
+                <div class="icon-box-content ps-3">
+                  <h3 class="card-title text-dark fs-5">Barbeque</h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- row -->
+
+          <a href="services.html"
+             class="btn btn-arrow btn-pill btn-medium btn-outline-dark bg-light text-black position-relative">
+              <span>View All Offers<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                        enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                  <g>
+                    <line fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                          y2="12.9"></line>
+                    <polyline fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10"
+                              points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                  </g>
+                </svg></span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="padding-xlarge">
+  <div class="container">
+    <div class="display-header">
+      <h2>Couleur Piste !</h2>
+      <p>Nombre Skieurs Par Couleur Piste :</p>
+    </div>
+
+    <div class="row mt-5">
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="counter-info">
+          <div class="counter-number">
+            <h5 class="fw-bold m-0" data-to="5120" data-speed="8000" style="color:#0a53be"><span class="number-item">{{colors?.BLEU}}</span> <span
+              class="digital-item"></span></h5>
+          </div>
+          <p class="counter-description text-uppercase">Blue</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="counter-info">
+          <div class="counter-number">
+            <h5 class="fw-bold m-0" data-to="5120" data-speed="8000"><span class="number-item">{{colors?.NOIR}}</span></h5>
+          </div>
+          <p class="counter-description text-uppercase">Noir</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="counter-info">
+          <div class="counter-number">
+            <h5 class="fw-bold m-0" data-to="5120" data-speed="8000" style="color:darkred"><span class="number-item">{{colors?.ROUGE}}</span></h5>
+          </div>
+          <p class="counter-description text-uppercase">Rouge</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="counter-info">
+          <div class="counter-number">
+            <h5 class="fw-bold m-0" data-to="5120" data-speed="8000" style="color: #0f5132"><span class="number-item">{{colors?.VERT}}</span></h5>
+          </div>
+          <p class="counter-description text-uppercase">Vert</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="our-rooms" class="position-relative padding-large pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="display-header d-flex justify-content-between pb-3">
+        <h2 class="display-7 text-dark fw-normal">Explore Our Rooms</h2>
+      </div>
+      <div class="swiper-arrow">
+        <svg class="icon-arrow-left border rounded-circle position-absolute">
+          <use xlink:href="#icon-arrow-left" />
+        </svg>
+      </div>
+      <div class="swiper product-swiper ps-md-3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card position-relative overflow-hidden">
+              <div class="image-holder">
+                <img src="assets/images/product-item1.jpg" alt="product-item" class="img-fluid overflow-hidden">
+              </div>
+              <div class="product-detail mt-3">
+                <h3><a href="#">Classic Rooms</a></h3>
+                <div class="detail position-absolute">
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td class="pe-2"><strong>Price:</strong></td>
+                      <td class="price"><strong>299$</strong> /Pernight</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Size:</strong></td>
+                      <td>10 ft</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Capacity:</strong></td>
+                      <td>Max persion 2</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Bed:</strong></td>
+                      <td>Normal Beds</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Services:</strong></td>
+                      <td>Wifi, Television, Bathroom,...</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <a href="room-details.html" class="btn btn-small btn-black btn-pill mt-3">More Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- product-card -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card position-relative overflow-hidden">
+              <div class="image-holder">
+                <img src="assets/images/product-item2.jpg" alt="product-item" class="img-fluid overflow-hidden">
+              </div>
+              <div class="product-detail mt-3">
+                <h3><a href="#">Grand Deluxe Rooms</a></h3>
+                <div class="detail position-absolute">
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td class="pe-2"><strong>Price:</strong></td>
+                      <td class="price"><strong>399$</strong> /Pernight</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Size:</strong></td>
+                      <td>10 ft</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Capacity:</strong></td>
+                      <td>Max persion 2</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Bed:</strong></td>
+                      <td>Normal Beds</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Services:</strong></td>
+                      <td>Wifi, Television, Bathroom,...</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <a href="room-details.html" class="btn btn-small btn-black btn-pill mt-3">More Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- product-card -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card position-relative overflow-hidden">
+              <div class="image-holder">
+                <img src="assets/images/product-item3.jpg" alt="product-item" class="img-fluid overflow-hidden">
+              </div>
+              <div class="product-detail mt-3">
+                <h3><a href="#">Ultra Superior Rooms</a></h3>
+                <div class="detail position-absolute">
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td class="pe-2"><strong>Price:</strong></td>
+                      <td class="price"><strong>399$</strong> /Pernight</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Size:</strong></td>
+                      <td>10 ft</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Capacity:</strong></td>
+                      <td>Max persion 2</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Bed:</strong></td>
+                      <td>Normal Beds</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Services:</strong></td>
+                      <td>Wifi, Television, Bathroom,...</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <a href="room-details.html" class="btn btn-small btn-black btn-pill mt-3">More Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- product-card -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card position-relative overflow-hidden">
+              <div class="image-holder">
+                <img src="assets/images/product-item1.jpg" alt="product-item" class="img-fluid overflow-hidden">
+              </div>
+              <div class="product-detail mt-3">
+                <h3><a href="#">Ultra Superior Rooms</a></h3>
+                <div class="detail position-absolute">
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td class="pe-2"><strong>Price:</strong></td>
+                      <td class="price"><strong>399$</strong> /Pernight</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Size:</strong></td>
+                      <td>10 ft</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Capacity:</strong></td>
+                      <td>Max persion 2</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Bed:</strong></td>
+                      <td>Normal Beds</td>
+                    </tr>
+                    <tr>
+                      <td class="pe-2"><strong>Services:</strong></td>
+                      <td>Wifi, Television, Bathroom,...</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <a href="room-details.html" class="btn btn-small btn-black btn-pill mt-3">More Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- product-card -->
+          </div>
+        </div>
+      </div>
+      <div class="swiper-arrow">
+        <svg class="icon-arrow-right border rounded-circle position-absolute">
+          <use xlink:href="#icon-arrow-right" />
+        </svg>
+      </div>
+      <div class="btn-center mt-5">
+
+        <a href="rooms.html"
+           class="btn btn-arrow btn-pill btn-medium btn-outline-dark bg-light text-black position-relative">
+            <span>View All Rooms<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                     enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                <g>
+                  <line fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                        y2="12.9"></line>
+                  <polyline fill="none" stroke="#111111" stroke-width="3" stroke-miterlimit="10"
+                            points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                </g>
+              </svg></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="position-relative bg-gray-100 padding-xlarge">
+  <div class="pattern-overlay pattern-left position-absolute">
+    <img src="assets/images/leaf-pattern2.png" alt="pattern">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="review-content position-relative">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide text-center d-flex justify-content-lg-center">
+              <div class="review-item col-lg-8 col-md-12">
+                <blockquote>“Sollicitudin pulvinar eu consectetur tortor. At consequat cursus convallis vestibulum
+                  proin eget. Sit iaculis nec sed nisl urna purus lectus eget accumsan lectus ultrices quam.”
+                </blockquote>
+                <div class="author-detail">
+                  <div class="name text-dark text-uppercase pt-2">-Jason Hook, USA</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide text-center d-flex justify-content-lg-center">
+              <div class="review-item col-lg-8 col-md-12">
+                <blockquote>“It is a long established fact that a reader will be distracted by the readable content of
+                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a letters.”
+                </blockquote>
+                <div class="author-detail">
+                  <div class="name text-dark text-uppercase pt-2">-Antoine Fournier, France</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide text-center d-flex justify-content-lg-center">
+              <div class="review-item col-md-8">
+                <blockquote>“A reader will be distracted by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.”
+                </blockquote>
+                <div class="author-detail">
+                  <div class="name text-dark text-uppercase pt-2">-Antoine Fournier, France</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</section>
+
+<section id="booking-wrap" class="padding-large">
+  <div class="container">
+    <div class="row">
+
+      <form action="" class="booking-form d-flex flex-wrap align-items-center justify-content-around">
+        <div class="booking-content d-flex flex-wrap col-lg-8">
+          <div class="booking-item">
+            <label for="date-in" class="text-uppercase d-block">Arrival</label>
+            <div class="date" id="select-arrival-date"></div>
+          </div>
+          <div class="booking-item">
+            <label for="date-in" class="text-uppercase d-block">Departure</label>
+            <div class="date" id="select-departure-date"></div>
+          </div>
+          <div class="booking-item">
+            <label class="text-uppercase d-block">Rooms</label>
+            <input type="number" class="booking" name="rooms" min="01" max="5" placeholder="01" value="01">
+          </div>
+          <div class="booking-item">
+            <label class="text-uppercase d-block">Guests</label>
+            <input type="number" class="booking" name="guests" min="01" max="10" placeholder="01" value="01">
+          </div>
+        </div>
+        <button class="btn btn-arrow btn-pill btn-medium btn-dark position-relative">
+            <span>Check availability<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                         enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                <g>
+                  <line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                        y2="12.9"></line>
+                  <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                            points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                </g>
+              </svg></span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<section id="video-player" class="position-relative overflow-hidden">
+  <div class="image-holder">
+    <img src="assets/images/video-item.jpg" alt="video" class="img-fluid">
+  </div>
+  <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY"
+     data-bs-target="#myModal" class="play-btn position-absolute d-flex justify-content-center align-items-center">
+    <svg class="player light" width="290" height="180">
+      <use xlink:href="#player"></use>
+    </svg>
+  </a>
+</section>
+
+<section id="latest-blog" class="padding-large">
+  <div class="container">
+    <div class="row">
+      <div class="display-header">
+        <h2 class="display-5 text-dark">Latest News</h2>
+        <p>Browse the latest articles from out blogs.</p>
+      </div>
+      <div class="post-grid d-flex flex-wrap mt-4">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+          <div class="card-item">
+            <div class="card-body p-0 d-flex">
+              <div class="meta-date me-3">
+                <span class="meta-day">15</span>
+                <span class="meta-month text-uppercase">Jan</span>
+              </div>
+              <div class="card-detail">
+                <h3 class="card-title fs-4 text-capitalize fw-semibold">
+                  <a href="blog.html">Easily book the best hotel room in this season</a>
+                </h3>
+                <p class="blog-paragraph">Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi
+                  suscipit ac ut faucibus
+                  pretium interdum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+          <div class="card-item">
+            <div class="card-body p-0 d-flex">
+              <div class="meta-date me-3">
+                <span class="meta-day">25</span>
+                <span class="meta-month">Jan</span>
+              </div>
+              <div class="card-detail">
+                <h3 class="card-title fs-4 text-capitalize fw-semibold">
+                  <a href="blog.html">Benefits of visiting spa and massage at hotel</a>
+                </h3>
+                <p class="blog-paragraph">Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi
+                  suscipit ac ut faucibus
+                  pretium interdum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+          <div class="card-item">
+            <div class="card-body p-0 d-flex">
+              <div class="meta-date me-3">
+                <span class="meta-day">27</span>
+                <span class="meta-month">Jan</span>
+              </div>
+              <div class="card-detail">
+                <h3 class="card-title fs-4 text-capitalize fw-semibold">
+                  <a href="blog.html">Top 10 hotel safety tips that you should follow</a>
+                </h3>
+                <p class="blog-paragraph">Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi
+                  suscipit ac ut faucibus
+                  pretium interdum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="overflow-hidden">
+  <div class="row">
+
+    <div class="col-lg-6 col-md-12 bg-gray-100 d-flex justify-content-center align-items-center g-0">
+      <div class="contact-detail">
+
+        <h2>Get In Touch</h2>
+        <p>Ante sed dictum nisi suscipit ac ut faucibus pretium. Ultrices interdum viverra pharetra, tellus. Sapien eu
+          diam ipsum volutpat, amet fringilla.</p>
+        <ul class="list-unstyled">
+          <li><strong>Address:</strong> Tea Berry, Marinette, USA</li>
+          <li><strong>Phone:</strong> +31 939 777 4546233 </li>
+          <li><strong>Email:</strong> <a href="mailto:">info@templatesjungle.com</a></li>
+        </ul>
+        <form action="" class="contact-form my-5">
+            <textarea name="text" placeholder="Write your message"
+                      class="text-dark w-100 border-0 bg-transparent fs-4 mb-4"></textarea>
+          <input type="text" name="full name" placeholder="Write your full name"
+                 class="text-dark w-100 border-0 bg-transparent fs-4 mb-4">
+          <input type="text" name="email address" placeholder="Write your email address"
+                 class="text-dark w-100 border-0 bg-transparent fs-4 mb-4">
+        </form>
+
+        <button class="btn btn-arrow btn-pill btn-medium btn-dark position-relative">
+            <span>Submit<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                             enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                <g>
+                  <line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34"
+                        y2="12.9"></line>
+                  <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                            points="22.2,1.1 34,12.9 22.2,24.7   ">
+                  </polyline>
+                </g>
+              </svg>
+            </span>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 g-0">
+      <div class="image-holder">
+        <img src="assets/images/single-image2.jpg" alt="single image" class="img-fluid">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="newsletter" class="padding-large">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2>Join our newsletter</h2>
+        <p>Sign up to our newsletter to receive our latest news about offers & promotions.</p>
+        <form id="form" class="d-flex flex-wrap position-relative mt-5">
+          <input type="text" name="email" placeholder="Enter your email address"
+                 class="border-radius-35 text-light ps-5 outline-transparent fs-3">
+
+          <div class="btn-subscribe position-absolute">
+            <button class="btn btn-arrow btn-pill btn-medium btn-dark position-relative">
+                <span>Subscribe<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8"
+                                    enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                    <g>
+                      <line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9"
+                            x2="34" y2="12.9"></line>
+                      <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                points="22.2,1.1 34,12.9 22.2,24.7   ">
+                      </polyline>
+                    </g>
+                  </svg>
+                </span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="overflow-hidden padding-large pb-0 bg-gray-100">
+  <div class="container">
+
+    <div class="row d-flex flex-wrap justify-content-between">
+
+      <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="footer-menu">
+          <h5 class="widget-title pb-2 fw-semibold fs-2">About us</h5>
+          <p>Ultrices interdum viverra pharetra, tellus. Sapien eu diam ipsum volutpat, amet fringi verra
+            pharetrailla.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-sm-6 pb-3">
+        <div class="footer-menu">
+          <h5 class="widget-title pb-2 fw-semibold fs-2">Quick Links</h5>
+          <ul class="menu-list list-unstyled">
+            <li class="pb-2">
+              <a href="#about">About</a>
+            </li>
+            <li class="pb-2">
+              <a href="#activities">Activities</a>
+            </li>
+            <li class="pb-2">
+              <a href="#our-rooms">Rooms</a>
+            </li>
+            <li class="pb-2">
+              <a href="#booking-wrap">Booking</a>
+            </li>
+            <li class="pb-2">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="footer-menu">
+          <h5 class="widget-title pb-2 fw-semibold fs-2">Contact</h5>
+          <ul class="menu-list list-unstyled">
+            <li class="pb-2">Tea Berry, Marinette, USA
+            </li>
+            <li class="pb-2">+31 939 777 4546233
+            </li>
+            <li class="pb-2">
+              <a href="mailto:">info@templatesjungle.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+        <div class="footer-menu">
+          <h5 class="widget-title pb-2 fw-semibold fs-2">Get social</h5>
+          <p>Follow us on social platforms and keep in touch with <a href="https://templatesjungle.com/">Templates
+            Jungle.</a></p>
+          <ul class="social-links list-unstyled d-flex mt-3">
+            <li class="border d-flex justify-content-center align-items-center mx-auto">
+              <a href="#">
+                <svg class="facebook text-primary-500" width="25" height="25">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="border d-flex justify-content-center align-items-center mx-auto">
+              <a href="#">
+                <svg class="twitter text-primary-500" width="25" height="25">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="border d-flex justify-content-center align-items-center mx-auto">
+              <a href="#">
+                <svg class="instagram text-primary-500" width="25" height="25">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="border d-flex justify-content-center align-items-center mx-auto">
+              <a href="#">
+                <svg class="youtube text-primary-500" width="25" height="25">
+                  <use xlink:href="#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="border d-flex justify-content-center align-items-center mx-auto">
+              <a href="#">
+                <svg class="linkedin text-primary-500" width="25" height="25">
+                  <use xlink:href="#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between border-top pt-3">
+      <div class="col-lg-4">
+        <p>© 2021 Copyright Telly.</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="payment-methods d-flex justify-content-center">
+          <p class="pe-2">Payment methods:</p>
+          <img src="assets/images/payment-items.png" alt="payment">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="payment-methods d-flex justify-content-end">
+          <p>Free HTML Website By: <a href="https://templatesjungle.com/">Templates Jungle.</a></p>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</footer>
+
+<script src="src/assets/js/jquery-1.11.0.min.js"></script>
+<script src="src/assets/js/date-time-picker.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="src/assets/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="src/assets/js/plugins.js"></script>
+<script type="text/javascript" src="src/assets/js/script.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
